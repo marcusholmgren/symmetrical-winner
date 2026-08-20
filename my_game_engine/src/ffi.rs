@@ -1,4 +1,4 @@
-use std::os::raw::{c_char, c_float, c_int};
+pub use std::os::raw::{c_char, c_float, c_int};
 
 pub const GLFW_PRESS: c_int = 1;
 pub const GLFW_RELEASE: c_int = 0;

@@ -11,6 +11,15 @@ cd intro-to-rust-starter/starter
 make run-c
 ```
 
+
+Test the game engine
+
+```bash
+cd intro-to-rust-starter/starter
+make test-rust
+```
+
+
 * * *
 
 ## Uses
