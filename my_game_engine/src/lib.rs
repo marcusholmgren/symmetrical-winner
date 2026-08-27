@@ -1,4 +1,5 @@
 pub mod ffi;
+pub mod macros;
 
 /// Tests for the C FFI bindings
 /// All the tests are marked with `#[ignore]` so they don't run in parallel
