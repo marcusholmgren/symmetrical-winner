@@ -20,13 +20,17 @@ fn main() {
         .iter()
         .find(|&&p| Path::new(p).exists())
         .copied()
-        .unwrap_or_else(|| panic!("Could not find opengl_wrapper_lib.c in any known relative path"));
+        .unwrap_or_else(|| {
+            panic!("Could not find opengl_wrapper_lib.c in any known relative path")
+        });
 
     let h_src = h_candidates
         .iter()
         .find(|&&p| Path::new(p).exists())
         .copied()
-        .unwrap_or_else(|| panic!("Could not find opengl_wrapper_lib.h in any known relative path"));
+        .unwrap_or_else(|| {
+            panic!("Could not find opengl_wrapper_lib.h in any known relative path")
+        });
 
     // Compile C wrapper source file into static library `libopenglwrapper.a`
     cc::Build::new().file(c_src).compile("openglwrapper");
