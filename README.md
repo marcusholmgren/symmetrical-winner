@@ -21,13 +21,16 @@ make test-rust
 ```
 
 
-From the root of the project
+From the root of the project recommended to limit thread to 1
+
+[Running tests consecutively](https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively)
+
 ```bash
 cd my_game_engine/
-cargo test
+cargo test -- --test-threads=1
 ```
 
-Several of the tests are marked with `#[ignore]` so they don't run in parallel. Run them individually to verify the correctness of the C FFI bindings.
+Several of the tests must run individually to verify the correctness of the C FFI bindings.
 ```bash
 cargo test tests::test_key_presses
 cargo test tests::test_screen_clearing

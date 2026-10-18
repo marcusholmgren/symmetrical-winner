@@ -2,14 +2,12 @@ pub mod ffi;
 pub mod macros;
 
 /// Tests for the C FFI bindings
-/// All the tests are marked with `#[ignore]` so they don't run in parallel
-/// Run them individually to verify the correctness of the C FFI bindings
+/// All the tests must run individually to verify the correctness of the C FFI bindings
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    #[ignore]
     fn test_simple_game_loop() {
         start_window_and_game_loop! {
             title: "Test Simple Game Loop",
@@ -22,7 +20,6 @@ mod tests {
     }
 
     #[test]
-    #[ignore]
     fn test_sprite_rendering() {
         let sprite;
 
@@ -42,7 +39,6 @@ mod tests {
     }
 
     #[test]
-    #[ignore]
     fn test_screen_clearing() {
         let red_sprite;
         let green_sprite;
@@ -71,7 +67,6 @@ mod tests {
     }
 
     #[test]
-    #[ignore]
     fn test_key_presses() {
         let space_sprite;
         let up_sprite;
@@ -133,7 +128,6 @@ mod tests {
     }
 
     #[test]
-    #[ignore]
     fn test_sprite_position_update() {
         let sprite;
         let mut x = 0.0f32;
