@@ -1,0 +1,7 @@
+[package]
+name = "my_sokoban"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+my_game_engine = { path = "../my_game_engine" }

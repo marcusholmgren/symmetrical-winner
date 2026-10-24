@@ -26,24 +26,14 @@ cd starter
 make test-rust
 ```
 
-
-From the root of the project recommended to limit thread to 1
-
-[Running tests consecutively](https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively)
-
+All of the tests must run individually to verify the correctness of the C FFI bindings.
 ```bash
 cd my_game_engine/
-cargo test -- --test-threads=1
-```
-
-Several of the tests must run individually to verify the correctness of the C FFI bindings.
-```bash
-cd my_game_engine/
-cargo test tests::test_key_presses
-cargo test tests::test_screen_clearing
-cargo test tests::test_simple_game_loop
-cargo test tests::test_sprite_position_update
-cargo test tests::test_sprite_rendering
+cargo test tests::test_key_presses -- --ignored
+cargo test tests::test_screen_clearing -- --ignored
+cargo test tests::test_simple_game_loop -- --ignored
+cargo test tests::test_sprite_position_update -- --ignored
+cargo test tests::test_sprite_rendering -- --ignored
 ```
 
 * * *
@@ -69,6 +59,24 @@ cargo run
 - `SPACE`: Fetch a new random sprite from the API and spawn it.
 - `UP` / `DOWN` / `LEFT`: Move the last spawned sprite.
 - `RIGHT`: Change the color of the last spawned sprite to green.
+
+* * *
+
+## My Sokoban
+
+A simple Sokoban puzzle game built on top of the game engine.
+
+Run the game with:
+
+```bash
+cd my_sokoban
+cargo run
+```
+
+### Controls
+
+- Arrow keys: Move the player and push boxes.
+- Spacebar: Reset the level.
 
 * * *
 
