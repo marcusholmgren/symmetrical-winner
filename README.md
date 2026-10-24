@@ -80,6 +80,24 @@ cargo run
 
 * * *
 
+## My Bevy Sokoban
+
+A Bevy-based variant of the Sokoban puzzle game.
+
+Run the game with:
+
+```bash
+cd my_bevy_sokoban
+cargo run
+```
+
+### Controls
+
+- Arrow keys / WASD: Move the player and push the box.
+- Spacebar: Reset the level.
+
+* * *
+
 ## Uses
 
 [GLFW](https://www.glfw.org/) is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop.
