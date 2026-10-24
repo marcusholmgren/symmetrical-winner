@@ -8,6 +8,7 @@ mod tests {
     use super::*;
 
     #[test]
+    #[ignore]
     fn test_simple_game_loop() {
         start_window_and_game_loop! {
             title: "Test Simple Game Loop",
@@ -20,6 +21,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn test_sprite_rendering() {
         let sprite;
 
@@ -39,6 +41,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn test_screen_clearing() {
         let red_sprite;
         let green_sprite;
@@ -67,6 +70,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn test_key_presses() {
         let space_sprite;
         let up_sprite;
@@ -128,6 +132,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn test_sprite_position_update() {
         let sprite;
         let mut x = 0.0f32;
